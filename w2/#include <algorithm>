@@ -1,0 +1,31 @@
+#include <algorithm>
+#include<cstring>
+#include<string.h>
+#include<iostream>
+#include<list>
+#include<map>
+#include<Set>
+#include<stack>
+#include<string>
+#include<utility>
+#include<vector>
+#include<cstdio>
+#include<cmath>
+
+
+#define LL Long Long
+#define N 200005
+#define INF 0X3FFFFFF
+
+using namespace std;
+intN, M;
+
+structnode{int bg,ed;//m per activity start time, end time}
+a[n];
+BOOLCMP (Node A, Node B) 
+{//Sort by end time    if(a.ed== B.Ed)returnA.bg <b.bg; returna.ed<B.Ed;}
+intMain () { while(~SCANF ("%d%d", &n, &m)) { for(inti =0; I < n; ++i) scanf ("%d%d", &a[i].bg,&A[i].ed); Sort (A,a+n,cmp); Multiset<int>endtime;//h Store the end time of the ongoing activity in each classroomendtime.clear (); int Ans =0;  for(inti =0; I < n; ++i) {Multiset<int>:: Iterator iter; ITER= Endtime.lower_bound (-a[i].bg);//is there a classroom activity that ends before I start time?                
+
+if(iter = Endtime.end ()) {//If you do not end the active classroom before the start of activity I, find another classroom                    
+if(Endtime.size () <m) {Endtime.insert (-a[i].ed-1); ++ans; }  
+                  Continue;                    } endtime.erase (ITER); //found a classroom activity is over, activity I in this classroomEndtime.insert (-A[i].ed-1);//Update the end time of an activity++ans; } printf ("%d\n", ans); }}

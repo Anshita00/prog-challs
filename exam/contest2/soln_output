@@ -1,0 +1,10 @@
+Edge is from 100 to 0 with capacity 9
+Edge is from 0 to 100 with capacity 0
+Edge is from 0 to 101 with capacity 4
+Edge is from 101 to 0 with capacity 0
+Edge is from 100 to 1 with capacity 5
+Edge is from 1 to 100 with capacity 0
+Edge is from 1 to 101 with capacity 6
+Edge is from 101 to 1 with capacity 0
+Edge is from 0 to 1 with capacity 3
+Edge is from 1 to 0 with capacity 3
